@@ -12,8 +12,28 @@
             box-sizing: border-box;
         }
 
-        /* Dark Mode with Blue/Purple Gradient */
+        /* Light Mode with Blue/Teal Gradient */
         :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(222.2, 47.4%, 11.2%);
+            --muted: hsl(210, 40%, 96.1%);
+            --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(222.2, 47.4%, 11.2%);
+            --border: hsl(214.3, 31.8%, 91.4%);
+            --primary: hsl(222.2, 47.4%, 11.2%);
+            --primary-foreground: hsl(210, 40%, 98%);
+            --secondary: hsl(210, 40%, 96.1%);
+            --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+            --accent: hsl(210, 40%, 96.1%);
+            --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+            --accent-color: hsl(195, 100%, 50%);
+            --gradient-1: hsl(195, 100%, 50%);
+            --gradient-2: hsl(280, 90%, 65%);
+        }
+
+        /* Dark Mode with Blue/Purple Gradient */
+        body.dark {
             --background: hsl(224, 71%, 4%);
             --foreground: hsl(213, 31%, 91%);
             --muted: hsl(223, 47%, 11%);
@@ -32,29 +52,201 @@
             --gradient-2: hsl(280, 90%, 65%);
         }
 
+        /* Retro Mode */
+        body.retro {
+            --background: hsl(39, 70%, 90%);
+            --foreground: hsl(20, 80%, 20%);
+            --muted: hsl(30, 40%, 85%);
+            --muted-foreground: hsl(20, 40%, 30%);
+            --card: hsl(39, 60%, 85%);
+            --card-foreground: hsl(20, 80%, 20%);
+            --border: hsl(20, 40%, 70%);
+            --primary: hsl(20, 80%, 50%);
+            --primary-foreground: hsl(39, 100%, 97%);
+            --secondary: hsl(30, 60%, 80%);
+            --secondary-foreground: hsl(20, 80%, 20%);
+            --accent: hsl(20, 80%, 50%);
+            --accent-foreground: hsl(39, 100%, 97%);
+            --accent-color: hsl(20, 80%, 50%);
+            --gradient-1: hsl(20, 80%, 50%);
+            --gradient-2: hsl(39, 80%, 60%);
+        }
+
+        /* Cyberpunk Mode */
+        body.cyberpunk {
+            --background: hsl(235, 85%, 8%);
+            --foreground: hsl(180, 100%, 75%);
+            --muted: hsl(235, 70%, 15%);
+            --muted-foreground: hsl(180, 70%, 55%);
+            --card: hsl(235, 80%, 12%);
+            --card-foreground: hsl(180, 100%, 75%);
+            --border: hsl(326, 100%, 60%);
+            --primary: hsl(326, 100%, 60%);
+            --primary-foreground: hsl(235, 100%, 98%);
+            --secondary: hsl(184, 100%, 52%);
+            --secondary-foreground: hsl(235, 85%, 8%);
+            --accent: hsl(0, 0%, 0%);
+            --accent-foreground: hsl(235, 85%, 8%);
+            --accent-color: hsl(326, 100%, 60%);
+            --gradient-1: hsl(326, 100%, 60%);
+            --gradient-2: hsl(196, 100%, 60%);
+        }
+
+        /* Paper Mode */
+        body.paper {
+            --background: hsl(40, 30%, 95%);
+            --foreground: hsl(25, 50%, 20%);
+            --muted: hsl(30, 20%, 90%);
+            --muted-foreground: hsl(25, 30%, 40%);
+            --card: hsl(35, 25%, 92%);
+            --card-foreground: hsl(25, 50%, 20%);
+            --border: hsl(25, 30%, 80%);
+            --primary: hsl(25, 95%, 40%);
+            --primary-foreground: hsl(40, 30%, 98%);
+            --secondary: hsl(15, 60%, 85%);
+            --secondary-foreground: hsl(25, 50%, 20%);
+            --accent: hsl(15, 60%, 85%);
+            --accent-foreground: hsl(25, 50%, 20%);
+            --accent-color: hsl(25, 95%, 40%);
+            --gradient-1: hsl(25, 95%, 40%);
+            --gradient-2: hsl(15, 85%, 50%);
+        }
+
+        /* Aurora Mode */
+        body.aurora {
+            --background: hsl(220, 40%, 10%);
+            --foreground: hsl(160, 100%, 90%);
+            --muted: hsl(220, 30%, 20%);
+            --muted-foreground: hsl(160, 70%, 70%);
+            --card: hsl(220, 35%, 15%);
+            --card-foreground: hsl(160, 100%, 90%);
+            --border: hsl(280, 80%, 60%);
+            --primary: hsl(160, 100%, 50%);
+            --primary-foreground: hsl(220, 40%, 10%);
+            --secondary: hsl(280, 80%, 60%);
+            --secondary-foreground: hsl(220, 40%, 10%);
+            --accent: hsl(320, 80%, 60%);
+            --accent-foreground: hsl(220, 40%, 10%);
+            --accent-color: hsl(160, 100%, 50%);
+            --gradient-1: hsl(160, 100%, 50%);
+            --gradient-2: hsl(280, 80%, 60%);
+        }
+
+        /* Synthwave Mode */
+        body.synthwave {
+            --background: hsl(260, 15%, 10%);
+            --foreground: hsl(330, 100%, 90%);
+            --muted: hsl(260, 20%, 20%);
+            --muted-foreground: hsl(330, 70%, 70%);
+            --card: hsl(260, 15%, 15%);
+            --card-foreground: hsl(330, 100%, 90%);
+            --border: hsl(300, 100%, 60%);
+            --primary: hsl(300, 100%, 60%);
+            --primary-foreground: hsl(260, 15%, 10%);
+            --secondary: hsl(190, 100%, 60%);
+            --secondary-foreground: hsl(260, 15%, 10%);
+            --accent: hsl(300, 100%, 60%);
+            --accent-foreground: hsl(260, 15%, 10%);
+            --accent-color: hsl(300, 100%, 60%);
+            --gradient-1: hsl(300, 100%, 60%);
+            --gradient-2: hsl(190, 100%, 60%);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--background);
             color: var(--foreground);
-            line-height: 1.6;
             overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* Navigation */
-        nav {
-            background: rgba(12, 12, 30, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
+        /* Animated Particle Background */
+        #particles {
+            position: fixed;
             top: 0;
-            z-index: 1000;
-            padding: 1rem 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Tech Stack Floating Animation */
+        .tech-float {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.08;
+            font-size: 4rem;
+            animation: techFloat linear infinite;
+        }
+
+        @keyframes techFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.08;
+            }
+            90% {
+                opacity: 0.08;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Header Styles */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(12, 12, 30, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        #header.scrolled {
+            background: rgba(12, 12, 30, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -67,30 +259,112 @@
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(20deg); }
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         nav a {
             color: var(--foreground);
             text-decoration: none;
             font-weight: 500;
+            position: relative;
             transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            transition: width 0.3s ease;
         }
 
         nav a:hover {
             color: var(--accent-color);
         }
 
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Theme Switcher */
+        .theme-switcher {
+            position: relative;
+        }
+
+        .theme-button {
+            background: var(--accent);
+            border: 1px solid var(--border);
+            color: var(--foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .theme-button:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .theme-dropdown {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            min-width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .theme-option {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-option:hover {
+            background: var(--accent);
+        }
+
         /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         /* Hero Section */
@@ -100,11 +374,25 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
         }
 
         .hero-label {
@@ -117,11 +405,21 @@
             font-weight: 600;
             margin-bottom: 2rem;
             color: var(--accent-color);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 var(--accent-color);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(0, 255, 255, 0);
+            }
         }
 
         .hero-title {
             font-family: 'Sora', sans-serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
@@ -131,6 +429,17 @@
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: gradient-animation 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient-animation {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .hero-description {
@@ -138,6 +447,7 @@
             color: var(--muted-foreground);
             margin-bottom: 3rem;
             max-width: 600px;
+            line-height: 1.8;
         }
 
         .hero-buttons {
@@ -153,11 +463,29 @@
             text-decoration: none;
             transition: all 0.3s;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             color: white;
+            border: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
         }
 
         .btn-primary:hover {
@@ -174,11 +502,13 @@
         .btn-secondary:hover {
             border-color: var(--accent-color);
             background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
 
         /* Section Styles */
         section {
             padding: 6rem 0;
+            position: relative;
         }
 
         .section-header {
@@ -206,47 +536,152 @@
         }
 
         .section-description {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--muted-foreground);
             max-width: 700px;
             margin: 0 auto;
+            line-height: 1.8;
         }
 
-        /* Projects Grid */
-        .projects-grid {
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .project-card {
+        .stat-card {
             background: var(--card);
-            border: 2px solid var(--border);
-            border-radius: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
             padding: 2rem;
-            transition: all 0.3s;
+            text-align: center;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .project-card::before {
+        .stat-card::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 40px rgba(0, 200, 255, 0.2);
+        }
+
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--muted-foreground);
+            font-size: 1rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 40px rgba(0, 200, 255, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-category h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(0, 255, 255, 0.1);
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-color);
-            box-shadow: 0 20px 40px rgba(0, 200, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 200, 255, 0.3);
         }
 
         .project-header {
-            margin-bottom: 1.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(200, 0, 255, 0.1));
+            border-bottom: 1px solid var(--border);
         }
 
         .project-title {
@@ -257,80 +692,96 @@
         }
 
         .project-subtitle {
-            color: var(--accent-color);
-            font-weight: 600;
+            color: var(--muted-foreground);
+            font-size: 0.9rem;
+        }
+
+        .project-body {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-description {
             color: var(--muted-foreground);
+            line-height: 1.8;
             margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            margin-top: auto;
         }
 
         .tech-badge {
-            padding: 0.4rem 1rem;
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid var(--accent-color);
-            border-radius: 1rem;
+            padding: 0.4rem 0.8rem;
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
             font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(0, 255, 255, 0.1);
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
         }
 
         .project-link {
-            color: var(--accent-color);
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
             text-decoration: none;
+            border-radius: 0.5rem;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .project-link:hover {
-            text-decoration: underline;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 200, 255, 0.3);
         }
 
-        /* Resume Download Section */
+        /* Resume Section */
         .resume-download-container {
-            display: flex;
-            justify-content: center;
-            margin: 3rem 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .resume-download-card {
             background: var(--card);
             border: 2px solid var(--border);
-            border-radius: 2rem;
-            padding: 4rem 3rem;
+            border-radius: 1rem;
+            padding: 3rem;
             text-align: center;
-            max-width: 600px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .resume-download-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            transition: all 0.3s ease;
         }
 
         .resume-download-card:hover {
-            transform: translateY(-10px);
             border-color: var(--accent-color);
-            box-shadow: 0 20px 40px rgba(0, 200, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 200, 255, 0.3);
+            transform: translateY(-5px);
         }
 
         .resume-icon {
-            font-size: 5rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
         }
 
@@ -339,41 +790,40 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .resume-download-card p {
             color: var(--muted-foreground);
-            font-size: 1.1rem;
-            line-height: 1.6;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
         /* Certifications */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
 
         .cert-card {
             background: var(--card);
-            border: 2px solid var(--border);
-            border-radius: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
             padding: 2rem;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .cert-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(0, 200, 255, 0.3);
         }
 
         .cert-image {
             width: 100%;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
         }
 
         .cert-header {
@@ -381,37 +831,52 @@
             justify-content: space-between;
             align-items: start;
             margin-bottom: 1rem;
+            gap: 1rem;
         }
 
         .cert-header h3 {
             font-family: 'Sora', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 700;
+            flex: 1;
         }
 
         .cert-badge {
-            padding: 0.4rem 1rem;
+            padding: 0.5rem 1rem;
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            border-radius: 1rem;
-            font-weight: 600;
-            font-size: 0.9rem;
             color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         .cert-details {
             color: var(--muted-foreground);
+            line-height: 2;
         }
 
-        .cert-details p {
-            margin-bottom: 0.5rem;
+        .cert-details strong {
+            color: var(--foreground);
+        }
+
+        .cert-details a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cert-details a:hover {
+            text-decoration: underline;
         }
 
         /* Contact Form */
         .contact-form-section {
+            max-width: 800px;
+            margin: 0 auto;
             background: var(--card);
-            border: 2px solid var(--border);
-            border-radius: 2rem;
-            padding: 4rem 3rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 3rem;
         }
 
         .form-title {
@@ -425,36 +890,36 @@
         .form-description {
             text-align: center;
             color: var(--muted-foreground);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 1.5rem;
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
         }
 
         .form-group label {
-            margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--foreground);
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             padding: 1rem;
             background: var(--accent);
             border: 1px solid var(--border);
@@ -462,33 +927,32 @@
             color: var(--foreground);
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-color);
             box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
         }
 
         .form-group textarea {
-            resize: vertical;
             min-height: 150px;
+            resize: vertical;
         }
 
         .submit-btn {
-            width: 100%;
-            padding: 1.25rem;
+            padding: 1rem 2rem;
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             color: white;
             border: none;
             border-radius: 0.5rem;
+            font-weight: 600;
             font-size: 1.1rem;
-            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .submit-btn:hover {
@@ -502,47 +966,114 @@
             border-top: 1px solid var(--border);
             padding: 3rem 0;
             margin-top: 6rem;
-            text-align: center;
         }
 
         .footer-content {
-            color: var(--muted-foreground);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
 
         .footer-links {
             display: flex;
-            justify-content: center;
             gap: 2rem;
-            margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: var(--accent-color);
+            color: var(--muted-foreground);
             text-decoration: none;
-            font-weight: 600;
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
         }
 
-        /* Animations */
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 200, 255, 0.4);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+            to { opacity: 1; }
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideInLeft {
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInRight 0.8s ease forwards;
         }
 
-        /* Responsive */
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: scaleIn 0.8s ease forwards;
+        }
+
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -552,58 +1083,177 @@
                 font-size: 2rem;
             }
 
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stats-grid,
+            .skills-grid,
             .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
+            .contact-form-section {
+                padding: 2rem;
             }
 
-            .resume-download-card {
-                padding: 3rem 2rem;
-            }
-
-            .resume-download-card h3 {
-                font-size: 1.5rem;
+            .form-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Prathmesh Lohar</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body class="dark">
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Floating Tech Icons -->
+    <div class="tech-float" style="left: 10%; animation-duration: 25s; animation-delay: 0s;">🤖</div>
+    <div class="tech-float" style="left: 80%; animation-duration: 30s; animation-delay: 2s;">⚡</div>
+    <div class="tech-float" style="left: 30%; animation-duration: 35s; animation-delay: 4s;">🔧</div>
+    <div class="tech-float" style="left: 70%; animation-duration: 28s; animation-delay: 1s;">📊</div>
+    <div class="tech-float" style="left: 50%; animation-duration: 32s; animation-delay: 3s;">💡</div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">PL</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="theme-switcher">
+                        <button class="theme-button" id="themeButton">🌙</button>
+                        <div class="theme-dropdown" id="themeDropdown">
+                            <div class="theme-option" data-theme="light">☀️ Light</div>
+                            <div class="theme-option" data-theme="dark">🌙 Dark</div>
+                            <div class="theme-option" data-theme="retro">🕹️ Retro</div>
+                            <div class="theme-option" data-theme="cyberpunk">🤖 Cyberpunk</div>
+                            <div class="theme-option" data-theme="paper">📄 Paper</div>
+                            <div class="theme-option" data-theme="aurora">🌌 Aurora</div>
+                            <div class="theme-option" data-theme="synthwave">🎵 Synthwave</div>
+                            <div class="theme-option" data-theme="system">💻 System</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero" id="hero">
         <div class="container">
-            <div class="hero-content fade-in">
-                <div class="hero-label">🤖 AI Automation Specialist</div>
+            <div class="hero-content">
+                <div class="hero-label">🚀 AI Automation Engineer</div>
                 <h1 class="hero-title">
-                    Building Intelligent<br>
-                    <span class="gradient-text">Automation Systems</span><br>
-                    with n8n & AI
+                    Hi, I'm <span class="gradient-text">Prathmesh Lohar</span>
                 </h1>
                 <p class="hero-description">
-                    I design and deploy AI-powered automation workflows that eliminate repetitive tasks, 
-                    streamline operations, and unlock exponential productivity gains for businesses.
+                    I build intelligent automation systems using AI, n8n workflows, and cutting-edge technologies. 
+                    Specializing in RAG agents, voice AI, and business process automation that transforms operations.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View My Work →</a>
+                    <a href="#projects" class="btn-primary">View Projects →</a>
                     <a href="#contact" class="btn-secondary">Get in Touch</a>
-                    <a href="https://linkedin.com/in/prath9763" target="_blank" class="btn-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Stats Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Statistics</div>
+                <h2 class="section-title">Impact by Numbers</h2>
+                <p class="section-description">
+                    Delivering measurable results through intelligent automation and AI-powered solutions
+                </p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card slide-in-left">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card scale-in">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Efficiency Increase</div>
+                </div>
+                <div class="stat-card slide-in-right">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Automation Uptime</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Workflows Created</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-description">
+                    A comprehensive toolkit for building next-generation AI automation solutions
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category slide-in-left">
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI & Automation</h3>
+                    <p class="section-description">Advanced AI integration and workflow automation</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">OpenAI GPT</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">AI Agents</span>
+                        <span class="skill-tag">RAG Systems</span>
+                    </div>
+                </div>
+                <div class="skill-category scale-in">
+                    <div class="skill-icon">💾</div>
+                    <h3>Databases & Storage</h3>
+                    <p class="section-description">Efficient data management and vector databases</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category slide-in-right">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Development</h3>
+                    <p class="section-description">Full-stack development and API integration</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Webhooks</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">🎙️</div>
+                    <h3>Voice & Communication</h3>
+                    <p class="section-description">Voice AI and multi-channel communication</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ElevenLabs</span>
+                        <span class="skill-tag">Telegram Bot</span>
+                        <span class="skill-tag">WhatsApp API</span>
+                        <span class="skill-tag">Voice Agents</span>
+                        <span class="skill-tag">TTS/STT</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -614,98 +1264,148 @@
         <div class="container">
             <div class="section-header fade-in">
                 <div class="section-label">Portfolio</div>
-                <h2 class="section-title">Featured n8n Automation Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <p class="section-description">
-                    Real-world automation workflows built with n8n, AI agents, and intelligent integrations
+                    Real-world AI automation solutions that drive business value
                 </p>
             </div>
             <div class="projects-grid">
-                <!-- Calendar Agent -->
+                <!-- Intelligent Lead Generation -->
                 <div class="project-card fade-in">
                     <div class="project-header">
-                        <h3 class="project-title">Calendar Agent</h3>
-                        <p class="project-subtitle">AI-Powered Schedule Management</p>
+                        <h3 class="project-title">Intelligent Lead Generation Automation</h3>
+                        <p class="project-subtitle">AI-Powered B2B Lead Discovery</p>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Intelligent calendar assistant that creates events, manages attendees, and retrieves schedules 
-                            using natural language. Automatically handles event durations, validates dates, and excludes 
-                            canceled appointments.
+                            Multi-stage n8n workflow leveraging Perplexity AI for intelligent web research, 
+                            Google Sheets integration for data management, and automated email campaigns with 
+                            GPT-4 personalization. Includes human-in-the-loop validation for quality control.
                         </p>
                         <div class="tech-stack">
                             <span class="tech-badge">n8n</span>
-                            <span class="tech-badge">OpenAI GPT</span>
-                            <span class="tech-badge">Google Calendar API</span>
-                            <span class="tech-badge">AI Agents</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Agent -->
-                <div class="project-card fade-in">
-                    <div class="project-header">
-                        <h3 class="project-title">Email Agent</h3>
-                        <p class="project-subtitle">Intelligent Email Automation</p>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-description">
-                            Smart email management system that sends personalized emails, retrieves messages from specific 
-                            senders, and automates email workflows. Leverages AI to draft context-aware communications at scale.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Perplexity AI</span>
                             <span class="tech-badge">GPT-4</span>
+                            <span class="tech-badge">Google Sheets</span>
                             <span class="tech-badge">Gmail API</span>
-                            <span class="tech-badge">LangChain</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PROFESSOR5258/Intelligent-Lead-Generation-Automation-System-with-n8n" target="_blank" class="project-link">
+                                View Project →
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- LinkedIn Agent -->
+                <!-- Human-in-the-Loop AI -->
                 <div class="project-card fade-in">
                     <div class="project-header">
-                        <h3 class="project-title">LinkedIn Prospecting Agent</h3>
-                        <p class="project-subtitle">Automated Lead Research & Enrichment</p>
+                        <h3 class="project-title">Human-in-the-Loop AI Automation</h3>
+                        <p class="project-subtitle">Quality-Controlled AI Workflows</p>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Advanced LinkedIn scraping system that finds prospect URLs, extracts profile data, retrieves 
-                            company information, and discovers email addresses. Integrates Apify actors and FindyMail API 
-                            for comprehensive lead intelligence.
+                            Advanced approval system combining AI efficiency with human oversight. Features Telegram-based 
+                            review interface, conditional workflow branching, and real-time decision logging. Perfect for 
+                            sensitive business processes requiring validation.
                         </p>
                         <div class="tech-stack">
                             <span class="tech-badge">n8n</span>
-                            <span class="tech-badge">Apify</span>
-                            <span class="tech-badge">FindyMail</span>
+                            <span class="tech-badge">Telegram Bot</span>
+                            <span class="tech-badge">Webhooks</span>
+                            <span class="tech-badge">Conditional Logic</span>
+                            <span class="tech-badge">AI Validation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PROFESSOR5258/Human-in-the-Loop-AI-Automation" target="_blank" class="project-link">
+                                View Project →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAG Agent -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">RAG Agent Business Knowledge AI</h3>
+                        <p class="project-subtitle">Intelligent Document Q&A System</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Retrieval-Augmented Generation system that transforms company documentation into an intelligent 
+                            knowledge base. Uses Pinecone for semantic search, OpenAI embeddings, and context-aware responses 
+                            with source citations.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Pinecone</span>
                             <span class="tech-badge">OpenAI</span>
-                            <span class="tech-badge">HTTP Tools</span>
+                            <span class="tech-badge">RAG</span>
+                            <span class="tech-badge">LangChain</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PROFESSOR5258/RAG-Agent-Business-Knowledge-AI-" target="_blank" class="project-link">
+                                View Project →
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Web Research Agent -->
+                <!-- AI Resume Analyzer -->
                 <div class="project-card fade-in">
                     <div class="project-header">
-                        <h3 class="project-title">Web Research Agent</h3>
-                        <p class="project-subtitle">AI-Powered Internet Research Assistant</p>
+                        <h3 class="project-title">AI Resume Analyzer & Evaluation</h3>
+                        <p class="project-subtitle">Automated Candidate Screening</p>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Comprehensive research agent that searches Google (web, images, videos, news, scholar, patents), 
-                            scrapes websites, and synthesizes information with source attribution. Includes multi-API support 
-                            and intelligent query routing.
+                            Intelligent hiring assistant that analyzes resumes against job descriptions, extracts key 
+                            qualifications, scores candidates, and generates detailed evaluation reports. Reduces screening 
+                            time by 80% while maintaining quality.
                         </p>
                         <div class="tech-stack">
                             <span class="tech-badge">n8n</span>
-                            <span class="tech-badge">Serper API</span>
                             <span class="tech-badge">GPT-4</span>
-                            <span class="tech-badge">Web Scraping</span>
-                            <span class="tech-badge">LangChain</span>
+                            <span class="tech-badge">PDF Parsing</span>
+                            <span class="tech-badge">NLP</span>
+                            <span class="tech-badge">Scoring Algorithm</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PROFESSOR5258/AI-Resume-Analyzer-Evaluation-System" target="_blank" class="project-link">
+                                View Project →
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Creator -->
+                <!-- Client Onboarding -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Client Onboarding Automation</h3>
+                        <p class="project-subtitle">Streamlined Customer Activation</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            End-to-end onboarding workflow managing welcome emails, document collection, account setup, 
+                            and progress tracking. Features personalized communication, automated reminders, and CRM 
+                            integration for seamless customer experience.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Email Automation</span>
+                            <span class="tech-badge">Google Drive</span>
+                            <span class="tech-badge">CRM Integration</span>
+                            <span class="tech-badge">Task Scheduling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PROFESSOR5258/Client-Onboarding-Automation-System-n8n-" target="_blank" class="project-link">
+                                View Project →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Creator Agent -->
                 <div class="project-card fade-in">
                     <div class="project-header">
                         <h3 class="project-title">Content Creator Agent</h3>
@@ -748,7 +1448,7 @@
                     </div>
                 </div>
 
-                <!-- Eleven Labs Agent -->
+                <!-- Solar Panel RAG Agent -->
                 <div class="project-card fade-in">
                     <div class="project-header">
                         <h3 class="project-title">Solar Panel RAG Agent</h3>
@@ -788,7 +1488,7 @@
                     <div class="resume-icon">📄</div>
                     <h3>Prathmesh Lohar - AI Automation Engineer</h3>
                     <p>Complete resume with experience, skills, certifications, and project portfolio</p>
-                    <a href="Prathmesh_Lohar_Resume.pdf" download class="btn-primary" style="margin-top: 2rem;">
+                    <a href="https://github.com/PROFESSOR5258/PERSONAL-PORTFOLIO/blob/main/Prathmesh_Lohar_AI_Automation_Engineer_n8n.pdf" target="_blank" class="btn-primary" style="margin-top: 2rem;">
                         Download Resume (PDF) →
                     </a>
                 </div>
@@ -816,7 +1516,7 @@
                         <p><strong>Duration:</strong> 57 Total Hours</p>
                         <p><strong>Completed:</strong> January 26, 2026</p>
                         <p><strong>Credential ID:</strong> UC-2c0132e0-800c-47c8-bbee-a1bf4e4c587f</p>
-                        <p><strong>Verification:</strong> <a href="https://ude.my/UC-2c0132e0-800c-47c8-bbee-a1bf4e4c587f" target="_blank" style="color: var(--accent-color);">View Certificate</a></p>
+                        <p><strong>Verification:</strong> <a href="https://ude.my/UC-2c0132e0-800c-47c8-bbee-a1bf4e4c587f" target="_blank">View Certificate</a></p>
                     </div>
                 </div>
             </div>
@@ -875,20 +1575,101 @@
                 <p>&copy; 2026 Prathmesh Lohar. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="https://linkedin.com/in/prath9763" target="_blank">LinkedIn</a>
-                    <a href="/cdn-cgi/l/email-protection#7f0f0d1e0b17121a0c171310171e0d3f1a071e120f131a511c1012">Email</a>
-                    <a href="services.html">Services</a>
-                    <a href="testimonials.html">Testimonials</a>
+                    <a href="https://github.com/PROFESSOR5258" target="_blank">GitHub</a>
+                    <a href="mailto:prathmeshlohar5258@gmail.com">Email</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
-            this.reset();
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Create particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Theme Switcher
+        const themeButton = document.getElementById('themeButton');
+        const themeDropdown = document.getElementById('themeDropdown');
+        const themeOptions = document.querySelectorAll('.theme-option');
+
+        const themeIcons = {
+            light: '☀️',
+            dark: '🌙',
+            retro: '🕹️',
+            cyberpunk: '🤖',
+            paper: '📄',
+            aurora: '🌌',
+            synthwave: '🎵',
+            system: '💻'
+        };
+
+        themeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            themeDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+            themeDropdown.classList.remove('active');
+        });
+
+        themeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const theme = option.dataset.theme;
+                setTheme(theme);
+            });
+        });
+
+        function setTheme(theme) {
+            if (theme === 'system') {
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.body.className = systemTheme;
+                themeButton.textContent = themeIcons['system'];
+                localStorage.setItem('theme', 'system');
+            } else {
+                document.body.className = theme;
+                themeButton.textContent = themeIcons[theme];
+                localStorage.setItem('theme', theme);
+            }
+            themeDropdown.classList.remove('active');
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'system') {
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.body.className = systemTheme;
+                themeButton.textContent = themeIcons['system'];
+            } else {
+                document.body.className = savedTheme;
+                themeButton.textContent = themeIcons[savedTheme];
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (localStorage.getItem('theme') === 'system') {
+                    document.body.className = e.matches ? 'dark' : 'light';
+                }
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
 
         // Smooth scrolling
@@ -896,4 +1677,117 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) translateX(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Number counter animation for stats
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                const text = element.textContent;
+                if (text.includes('+')) {
+                    element.textContent = value + '+';
+                } else if (text.includes('%')) {
+                    element.textContent = value + '%';
+                } else if (text.includes('/')) {
+                    return; // Skip 24/7
+                } else {
+                    element.textContent = value;
+                }
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Animate stats on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const text = statNumber.textContent;
+                    
+                    // Skip 24/7
+                    if (text.includes('/')) {
+                        entry.target.dataset.animated = 'true';
+                        return;
+                    }
+                    
+                    const endValue = parseInt(text);
+                    if (!isNaN(endValue)) {
+                        statNumber.textContent = '0';
+                        animateValue(statNumber, 0, endValue, 2000);
+                    }
+                    entry.target.dataset.animated = 'true';
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statsObserver.observe(card);
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
