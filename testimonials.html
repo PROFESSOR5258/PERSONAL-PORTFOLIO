@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials | Prathmesh Lohar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: hsl(224, 71%, 4%);
+            --foreground: hsl(213, 31%, 91%);
+            --muted: hsl(223, 47%, 11%);
+            --muted-foreground: hsl(215.4, 16.3%, 56.9%);
+            --card: hsl(224, 71%, 4%);
+            --border: hsl(216, 34%, 17%);
+            --accent-color: hsl(195, 100%, 50%);
+            --gradient-1: hsl(195, 100%, 50%);
+            --gradient-2: hsl(280, 90%, 65%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(12, 12, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .testimonial-card {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 200, 255, 0.2);
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--accent-color);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--foreground);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .client-info {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+
+        .client-details h4 {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .client-details p {
+            color: var(--muted-foreground);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            color: var(--muted-foreground);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Prathmesh Lohar</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Client Success Stories</h1>
+            <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 700px; margin: 0 auto;">
+                Real results from businesses that leveraged AI automation to transform their operations
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Prathmesh built us a calendar automation agent that saves our team 10+ hours weekly. Natural language scheduling is a game-changer.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">AK</div>
+                        <div class="client-details">
+                            <h4>Amit Kumar</h4>
+                            <p>Operations Manager, Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        The LinkedIn prospecting agent is brilliant. We're finding qualified leads faster and our outreach is much more targeted.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">SP</div>
+                        <div class="client-details">
+                            <h4>Sarah Patel</h4>
+                            <p>Sales Director, B2B SaaS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Excellent work on our email automation. Personalized emails at scale without the manual effort. Highly professional!
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">MR</div>
+                        <div class="client-details">
+                            <h4>Michael Rogers</h4>
+                            <p>Marketing Lead, E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        The Telegram support bot handles customer queries efficiently. Reduced our response time significantly.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">NK</div>
+                        <div class="client-details">
+                            <h4>Neha Kapoor</h4>
+                            <p>Customer Success, SaaS Platform</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Prathmesh delivered a web research agent that saves our team hours of manual work. Very impressed with the quality.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">JL</div>
+                        <div class="client-details">
+                            <h4>James Liu</h4>
+                            <p>Research Analyst, Consulting Firm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Fast, professional, and delivers exactly what's needed. The content generation workflow is perfect for our needs.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">RT</div>
+                        <div class="client-details">
+                            <h4>Rachel Turner</h4>
+                            <p>Content Manager, Digital Agency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Great communication throughout the project. The RAG system for our knowledge base works flawlessly.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">DM</div>
+                        <div class="client-details">
+                            <h4>David Martinez</h4>
+                            <p>CTO, SaaS Company</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        The automation workflows are well-designed and easy to maintain. Excellent value for money.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">LS</div>
+                        <div class="client-details">
+                            <h4>Lisa Singh</h4>
+                            <p>Product Manager, Tech Company</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        Impressed by the technical expertise and problem-solving ability. Would definitely work with Prathmesh again.
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">KC</div>
+                        <div class="client-details">
+                            <h4>Kevin Chen</h4>
+                            <p>Founder, Startup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Prathmesh Lohar. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/prath9763" target="_blank">LinkedIn</a>
+                    <a href="mailto:prathmeshlohar@example.com">Email</a>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

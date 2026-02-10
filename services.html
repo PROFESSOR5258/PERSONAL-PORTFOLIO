@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | Prathmesh Lohar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: hsl(224, 71%, 4%);
+            --foreground: hsl(213, 31%, 91%);
+            --muted: hsl(223, 47%, 11%);
+            --muted-foreground: hsl(215.4, 16.3%, 56.9%);
+            --card: hsl(224, 71%, 4%);
+            --border: hsl(216, 34%, 17%);
+            --accent-color: hsl(195, 100%, 50%);
+            --gradient-1: hsl(195, 100%, 50%);
+            --gradient-2: hsl(280, 90%, 65%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(12, 12, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .header-section h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 200, 255, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--muted-foreground);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .price {
+            font-family: 'Sora', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 2rem 0 1rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .price-subtitle {
+            font-size: 1rem;
+            color: var(--muted-foreground);
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 200, 255, 0.3);
+        }
+
+        .process-section {
+            background: var(--muted);
+            padding: 4rem 0;
+            border-radius: 2rem;
+            margin: 4rem 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .step-title {
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section {
+            margin-top: 4rem;
+        }
+
+        .faq-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-color);
+        }
+
+        .faq-question {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            color: var(--muted-foreground);
+            line-height: 1.7;
+        }
+
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            color: var(--muted-foreground);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Prathmesh Lohar</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="header-section">
+        <div class="container">
+            <h1>Services & Pricing</h1>
+            <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 700px; margin: 0 auto;">
+                Affordable AI automation solutions designed to transform your business operations
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3 class="service-title">AI Workflow Automation</h3>
+                    <p class="service-description">
+                        End-to-end automation solutions using n8n, GPT-4, and custom AI agents to eliminate repetitive tasks and accelerate operations.
+                    </p>
+                    <ul class="service-features">
+                        <li>Custom n8n workflow design</li>
+                        <li>AI agent development</li>
+                        <li>Multi-tool integration</li>
+                        <li>Process optimization</li>
+                        <li>Documentation & training</li>
+                    </ul>
+                    <div class="price">₹1,25,000 / $1,500</div>
+                    <p class="price-subtitle">Starting Price</p>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3 class="service-title">Lead Nurturing Systems</h3>
+                    <p class="service-description">
+                        Intelligent lead management and nurturing systems that automatically qualify, score, and engage prospects with personalized communication.
+                    </p>
+                    <ul class="service-features">
+                        <li>AI-powered lead scoring</li>
+                        <li>Automated email sequences</li>
+                        <li>CRM integration</li>
+                        <li>Multi-channel outreach</li>
+                        <li>Analytics dashboard</li>
+                    </ul>
+                    <div class="price">₹1,65,000 / $2,000</div>
+                    <p class="price-subtitle">Starting Price</p>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3 class="service-title">Customer Support Automation</h3>
+                    <p class="service-description">
+                        24/7 AI-powered customer support systems that handle inquiries, resolve issues, and maintain high satisfaction scores.
+                    </p>
+                    <ul class="service-features">
+                        <li>AI chatbot development</li>
+                        <li>Knowledge base integration</li>
+                        <li>Multi-channel support</li>
+                        <li>Ticket routing & escalation</li>
+                        <li>Performance analytics</li>
+                    </ul>
+                    <div class="price">₹2,00,000 / $2,400</div>
+                    <p class="price-subtitle">Starting Price</p>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3 class="service-title">Document Processing</h3>
+                    <p class="service-description">
+                        Automated document processing systems that extract, validate, and organize data from invoices, forms, and reports.
+                    </p>
+                    <ul class="service-features">
+                        <li>OCR & data extraction</li>
+                        <li>AI-powered validation</li>
+                        <li>Database integration</li>
+                        <li>Error handling</li>
+                        <li>Audit trail & compliance</li>
+                    </ul>
+                    <div class="price">₹1,50,000 / $1,800</div>
+                    <p class="price-subtitle">Starting Price</p>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3 class="service-title">Content Generation Pipeline</h3>
+                    <p class="service-description">
+                        Automated content creation and distribution systems for marketing, social media, and customer communications.
+                    </p>
+                    <ul class="service-features">
+                        <li>AI content generation</li>
+                        <li>SEO optimization</li>
+                        <li>Multi-platform publishing</li>
+                        <li>Brand consistency checks</li>
+                        <li>Performance tracking</li>
+                    </ul>
+                    <div class="price">₹1,65,000 / $2,000</div>
+                    <p class="price-subtitle">Starting Price</p>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 class="service-title">Custom Automation Solutions</h3>
+                    <p class="service-description">
+                        Fully customized automation systems tailored to your unique business processes and requirements.
+                    </p>
+                    <ul class="service-features">
+                        <li>Discovery & consultation</li>
+                        <li>Custom development</li>
+                        <li>Third-party integrations</li>
+                        <li>Scalability planning</li>
+                        <li>Ongoing support & maintenance</li>
+                    </ul>
+                    <div class="price">Custom Quote</div>
+                    <p class="price-subtitle">Based on your requirements</p>
+                    <a href="index.html#contact" class="btn-primary">Let's Talk</a>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="process-section">
+                <div class="container">
+                    <h2 class="section-title">How I Work</h2>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Discovery Call</h3>
+                            <p style="color: var(--muted-foreground);">We discuss your needs, challenges, and automation goals.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Proposal</h3>
+                            <p style="color: var(--muted-foreground);">I create a detailed proposal with timeline, deliverables, and pricing.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Development</h3>
+                            <p style="color: var(--muted-foreground);">I build your automation with regular updates and check-ins.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Testing</h3>
+                            <p style="color: var(--muted-foreground);">We test thoroughly and refine until it's perfect.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h3 class="step-title">Launch</h3>
+                            <p style="color: var(--muted-foreground);">I deploy, provide training, and offer ongoing support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does a typical project take?</div>
+                    <div class="faq-answer">Most automation projects take 2-6 weeks depending on complexity. Simple workflows can be completed in 1-2 weeks, while comprehensive systems may take 4-6 weeks. I'll provide a detailed timeline during the proposal phase.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer ongoing support?</div>
+                    <div class="faq-answer">Yes! All projects include 30 days of post-launch support. After that, I offer monthly maintenance packages starting at ₹25,000/month ($300/month) for updates, monitoring, and optimization.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What tools do you work with?</div>
+                    <div class="faq-answer">I specialize in n8n for workflow automation, and work with Make, Zapier, Python, and custom APIs. For AI, I use GPT-4, Claude, LangChain, Pinecone, and various other tools. I can integrate with virtually any platform that has an API.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you integrate with our existing tools?</div>
+                    <div class="faq-answer">Absolutely! I have experience integrating with CRMs (Salesforce, HubSpot), databases (PostgreSQL, MongoDB, Redis), communication tools (Slack, Gmail, Telegram), and hundreds of other platforms.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What if I need changes after completion?</div>
+                    <div class="faq-answer">Minor tweaks during the 30-day support period are free. For larger changes or new features, I offer flexible hourly rates (₹8,300/hour or $100/hour) or we can scope a new project.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you accept payment in Rupees or Dollars?</div>
+                    <div class="faq-answer">Yes! I accept payment in both Indian Rupees (₹) and US Dollars ($). Payment terms are typically 50% upfront and 50% upon completion, with flexible options for larger projects.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Prathmesh Lohar. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/prath9763" target="_blank">LinkedIn</a>
+                    <a href="mailto:prathmeshlohar@example.com">Email</a>
+                    <a href="index.html">Home</a>
+                    <a href="testimonials.html">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
