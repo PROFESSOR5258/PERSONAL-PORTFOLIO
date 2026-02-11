@@ -99,16 +99,16 @@ All services priced in both currencies for flexibility:
 
 | Service | INR | USD |
 |---------|-----|-----|
-| AI Workflow Automation | ₹1,25,000 | $1,500 |
-| Lead Nurturing Systems | ₹1,65,000 | $2,000 |
-| Customer Support Automation | ₹2,00,000 | $2,400 |
-| Document Processing | ₹1,50,000 | $1,800 |
-| Content Generation Pipeline | ₹1,65,000 | $2,000 |
+| AI Workflow Automation | ₹50,000 | $600 |
+| Lead Nurturing Systems | ₹60,000 | $700 |
+| Customer Support Automation | ₹70,000 | $800 |
+| Document Processing | ₹40,000 | $400 |
+| Content Generation Pipeline | ₹1,00,000 | $1,200 |
 | Custom Solutions | Custom Quote | Custom Quote |
 
 **Support Packages:**
-- Monthly maintenance: ₹25,000/month ($300/month)
-- Hourly rate: ₹8,300/hour ($100/hour)
+- Monthly maintenance: ₹10,000/month ($150/month)
+- Hourly rate: ₹2000/hour ($20/hour)
 - All projects include 30 days of free post-launch support
 
 ## 🛠️ Technologies Showcased
