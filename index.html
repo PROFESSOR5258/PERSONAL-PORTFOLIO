@@ -1551,6 +1551,7 @@
                             <label for="budget">Project Budget *</label>
                             <select id="budget" name="budget" required>
                                 <option value="">Select Budget Range</option>
+                                <option value="Just_msg">JUST MESSAGE</option>
                                 <option value="<₹25k">< ₹25,000 (< $300)</option>
                                 <option value="₹25k-₹50k">₹25,000 - ₹50,000 ($300-$600)</option>
                                 <option value="₹50k-₹1L">₹50,000 - ₹1,00,000 ($600-$1,200)</option>
@@ -1576,7 +1577,9 @@
                 <div class="footer-links">
                     <a href="https://linkedin.com/in/prath9763" target="_blank">LinkedIn</a>
                     <a href="https://github.com/PROFESSOR5258" target="_blank">GitHub</a>
-                    <a href="mailto:prathmeshlohar5258@gmail.com">Email</a>
+                    <a href="mailto:yashlohar5258@gmail.com">Email</a>
+                    <a href="services.html">Services</a>
+                    <a href="testimonials.html">Testimonials</a>
                 </div>
             </div>
         </div>
@@ -1585,7 +1588,7 @@
     <!-- Scroll to Top Button -->
     <button class="scroll-top" onclick="scrollToTop()">↑</button>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Create particles
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 50; i++) {
@@ -1774,20 +1777,54 @@
             statsObserver.observe(card);
         });
 
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // // Form submission handler
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+        //     // Get form data
+        //     const formData = new FormData(this);
+        //     const data = Object.fromEntries(formData);
             
-            // Show success message
-            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
+        //     // Show success message
+        //     alert('Thank you for your message! I\'ll get back to you within 24 hours.');
             
-            // Reset form
-            this.reset();
-        });
+        //     // Reset form
+        //     this.reset();
+        // });
+
+        // Form submission handler - Connected to n8n
+                document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    const form = this;
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData);
+
+                    try {
+                        const response = await fetch('https://n8n.agnic.cloud/webhook/portfolio-form-data-email', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+
+                        if (response.ok) {
+                            alert("🚀 Message sent successfully! I'll get back to you within 24 hours.");
+                            form.reset();
+                        } else {
+                            alert("❌ Something went wrong. Please try again.");
+                        }
+
+                    } catch (error) {
+                        console.error("Webhook Error:", error);
+                        alert("⚠️ Unable to connect. Please try again later.");
+                    }
+                });
+
+
     </script>
 </body>
 </html>
+        
+        
